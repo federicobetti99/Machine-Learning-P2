@@ -25,7 +25,7 @@ parameters = {'subsample' : 0.8999999999999999,
 ```
 
 ### Optimal Parameters(Classification)
-To reproduce the results we obtained for the regression task, please use a **Random Forest Classifier** with the following hyperparameters:
+To reproduce the results we obtained for the classification task, please use a **Random Forest Classifier** with the following hyperparameters:
 ```python
 parameters = {'n_estimators':400,
               'min_samples_split':5,
