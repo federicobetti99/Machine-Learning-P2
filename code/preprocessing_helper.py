@@ -105,10 +105,10 @@ def check_Isolation_Forests(contamination, outliers_indices, RelKa):
 
     if contamination != 'auto':
 
-        # we calculate the outliers percentage as the ratio between the outliers found and the number of samples
+        # we calculate the outliers' percentage as the ratio between the outliers found and the number of samples
         outliers_percentage = 1 / len(RelKa) * len(outliers_indices)
 
-        # we check that in absolute value the outliers percentage is at most tol distant from the contamination
+        # we check that in absolute value the outliers' percentage is at most tol distant from the contamination
         assert np.abs(contamination - outliers_percentage) < tol
 
 
@@ -238,7 +238,7 @@ def sequential_encoding(df):
 #autoencoders for reducing the dimensionality of the data (it was performing better than PCA)
 
 
-def train_autoencoder(X_train, metrics=[metrics.RootMeanSquaredError(name='rms'),metrics.MeanAbsoluteError(name='mae')],
+def train_autoencoder(X_train, metrics=[metrics.RootMeanSquaredError(name='rms'), metrics.MeanAbsoluteError(name='mae')],
                       ENCODING_DIM=2, BATCH_SIZE=1024, EPOCHS=80):
     """
     This function creates and train an autoencoder, the encoder part is made up of two dense layers with Relu activation

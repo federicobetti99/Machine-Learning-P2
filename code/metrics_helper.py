@@ -10,7 +10,7 @@ from sklearn.metrics import confusion_matrix
 """
 Discussion: Before and after performing undersample and oversample of our dataset, we tried using a different loss to
 train our model on in order to achieve better results in the minority class. As you can see from the final notebooks,
-once the undersamping and oversampling were performed, there was no need to train our model with such metrics since we
+once the undersampling and oversampling were performed, there was no need to train our model with such metrics since we
 have a dataset almost balanced (70% for the majority class and 30% of the minority class were the proportions which gave
 us the best results). Therefore, this metrics were not used anymore to train the models but they were used only to
 evaluate the goodness of fits of the models after training.
@@ -117,7 +117,7 @@ def score_metrics_regression(x_train, x_test, y_train, y_test, model):
     # we fit the model
     model.fit(x_train, y_train, eval_metric="rmse", eval_set=[(x_train, y_train), (x_test, y_test)])
 
-    # we take the results for the training and test set and we append to the lists
+    # we take the results for the training and test set, and we append to the lists
     training_scores.append(model.evals_result()['validation_0']['rmse'])
     testing_scores.append(model.evals_result()['validation_1']['rmse'])
 

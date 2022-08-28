@@ -28,7 +28,7 @@ Requirements for the needed packages are available in requirements.txt. To insta
 ### Optimal Parameters (Regression)
 To reproduce the results we obtained for the regression task, please use a **XGBoost Regressor** model with the following hyperparameters:
 ```python
-parameters = {'subsample' : 0.9
+parameters = {'subsample' : 0.9,
               'n_estimators' : 500,
               'max_depth' : 20,
               'learning_rate' : 0.01,
